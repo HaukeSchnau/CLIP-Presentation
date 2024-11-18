@@ -1,0 +1,230 @@
+%%%%%% Crayfish theme %%%%%%
+% color def
+
+% theme
+\definecolor{c_title}{HTML}{292929}
+\definecolor{c_text}{HTML}{666666}
+\definecolor{c_comment}{HTML}{adadad}
+\definecolor{c_background}{HTML}{ffffff}
+\definecolor{c_codebg}{HTML}{f0f0f0}
+
+%%%%%% ACCENT COLOR (crab theme) %%%%%%
+\definecolor{black}{HTML}{2b2728}       % black
+%\definecolor{white}{HTML}{dee2ca}       % white
+\definecolor{red}{HTML}{e33054}         % red
+\definecolor{orange}{HTML}{e5703a}      % orange
+\definecolor{yellow}{HTML}{bc9d1a}      % yellow
+\definecolor{green}{HTML}{81af18}       % green
+\definecolor{cyan}{HTML}{1bcaa7}        % cyan
+\definecolor{blue}{HTML}{1d9fd8}        % blue
+\definecolor{violet}{HTML}{8459e8}      % violet
+\definecolor{magenta}{HTML}{c74be7}     % magenta
+
+%%%%%% user can pick color by doing \usecolortheme[color=<color>]{Crayfish}
+\definecolor{c_color}{named}{red}       % red default
+\DeclareOptionBeamer{color}{\definecolor{c_color}{named}{#1}}
+
+\DeclareOptionBeamer{high-contrast}{
+\definecolor{c_title}{HTML}{141414}
+\definecolor{c_text}{HTML}{292929}
+\definecolor{c_comment}{HTML}{666666}
+}
+
+\DeclareOptionBeamer{dark-mode}{
+\definecolor{c_title}{HTML}{ffffff}
+\definecolor{c_text}{HTML}{adadad}
+\definecolor{c_comment}{HTML}{666666}
+\definecolor{c_background}{HTML}{292929}
+\definecolor{c_codebg}{HTML}{141414}
+}
+
+\ProcessOptionsBeamer
+
+%color set
+
+%%%%%% Structure of the presentation
+
+% Pallete
+\setbeamercolor{pallete primarey}{fg=c_text, bg=c_background}
+\setbeamercolor{pallete secondary}{fg=c_title, bg=c_background}
+\setbeamercolor{pallete tertiary}{fg=c_comment, bg=c_background}
+\setbeamercolor{pallete quaternary}{fg=c_color, bg=c_background}
+\setbeamercolor{pallete sidebar primarey}{fg=c_text, bg=c_background}
+\setbeamercolor{pallete sidebar secondary}{fg=c_title, bg=c_background}
+\setbeamercolor{pallete sidebar tertiary}{fg=c_comment, bg=c_background}
+\setbeamercolor{pallete sidebar quaternary}{fg=c_color, bg=c_background}
+
+% Global definitions
+\setbeamercolor{normal text}{fg=c_text, bg=c_background}
+\setbeamercolor{background cnavas}{fg=c_background}
+\setbeamercolor{background}{fg=c_background, bg=c_background}
+\setbeamercolor{separation line}{fg=c_color, bg=c_background}
+\setbeamercolor{fine separation line}{fg=c_color, bg=c_background}
+
+% Title page, part, section, subsection
+\setbeamercolor{titlelike}{fg=c_title, bg=c_background}
+\setbeamercolor{title}{fg=c_title, bg=c_background}
+\setbeamercolor{subtitle}{fg=c_title, bg=c_background}
+\setbeamercolor{part title}{fg=c_title, bg=c_background}
+\setbeamercolor{section title}{fg=c_title, bg=c_background}
+\setbeamercolor{subsection title}{fg=c_title, bg=c_background}
+
+\setbeamercolor{author}{fg=c_color, bg=c_background}
+\setbeamercolor{institute}{fg=c_comment, bg=c_background}
+\setbeamercolor{date}{fg=c_comment, bg=c_background}
+\setbeamercolor{titlegraphic}{fg=c_comment, bg=c_background}
+
+\setbeamercolor{part name}{fg=c_text, bg=c_background}
+\setbeamercolor{section name}{fg=c_text, bg=c_background}
+\setbeamercolor{subsection name}{fg=c_text, bg=c_background}
+
+% Table of contents
+\setbeamercolor{section in toc}{fg=c_title, bg=c_background}
+\setbeamercolor{section in toc shaded}{fg=c_comment, bg=c_background}
+\setbeamercolor{subsection in toc}{fg=c_text, bg=c_background}
+\setbeamercolor{subsection in toc shaded}{fg=c_comment, bg=c_background}
+\setbeamercolor{subsubsection in toc}{fg=c_text, bg=c_background}
+\setbeamercolor{subsubsection in toc shaded}{fg=c_comment, bg=c_background}
+\setbeamercolor{section number projected}{fg=c_background}
+\setbeamercolor{subsection number projected}{fg=c_background}
+\setbeamercolor{subsubsection number projected}{fg=c_background}
+
+% Bibliography
+\setbeamercolor{bibliography entry author}{fg=c_text, bg=c_background}
+\setbeamercolor{bibliography entry title}{fg=c_text, bg=c_background}
+\setbeamercolor{bibliography entry location}{fg=c_text, bg=c_background}
+\setbeamercolor{bibliography entry note}{fg=c_comment, bg=c_background}
+\setbeamercolor{bibliography item}{fg=c_color, bg=c_background}
+
+% Note page
+\setbeamercolor{note page}{fg=c_text, bg=c_background}
+\setbeamercolor{note title}{fg=c_title, bg=c_background}
+\setbeamercolor{note date}{fg=c_comment, bg=c_background}
+
+%%%%%% Structure of a frame
+
+% Headlines and Footlines
+\setbeamercolor{headline}{fg=c_comment, bg=c_background}
+\setbeamercolor{footline}{fg=c_comment, bg=c_background}
+\setbeamercolor{page number in head/foot}{fg=c_comment, bg=c_background}
+
+\setbeamercolor{separation line}{fg=c_comment, bg=c_background}
+\setbeamercolor{upper separation line head}{fg=c_comment, bg=c_background}
+\setbeamercolor{middle separation line head}{fg=c_comment, bg=c_background}
+\setbeamercolor{lower separation line head}{fg=c_comment, bg=c_background}
+\setbeamercolor{upper separation line foot}{fg=c_comment, bg=c_background}
+\setbeamercolor{middle separation line foot}{fg=c_comment, bg=c_background}
+\setbeamercolor{lower separation line foot}{fg=c_comment, bg=c_background}
+
+\setbeamercolor{author in head/foot}{fg=c_comment, bg=c_background}
+\setbeamercolor{title in head/foot}{fg=c_comment, bg=c_background}
+\setbeamercolor{institute in head/foot}{fg=c_comment, bg=c_background}
+\setbeamercolor{date in head/foot}{fg=c_comment, bg=c_background}
+
+\setbeamercolor{section in head/foot}{fg=c_comment, bg=c_background}
+\setbeamercolor{subsection in head/foot}{fg=c_comment, bg=c_background}
+\setbeamercolor{subsubsection in head/foot}{fg=c_comment, bg=c_background}
+
+% Sidebar
+\setbeamercolor{sidebar}{fg=c_comment, bg=c_background}
+\setbeamercolor{sidebar left}{fg=c_comment, bg=c_background}
+\setbeamercolor{sidebar right}{fg=c_comment, bg=c_background}
+
+\setbeamercolor{section in sidebar}{fg=c_comment, bg=c_background}
+\setbeamercolor{section in sidebar shaded}{fg=c_comment, bg=c_background}
+\setbeamercolor{subsection in sidebar}{fg=c_comment, bg=c_background}
+\setbeamercolor{subsection in sidebar shaded}{fg=c_comment, bg=c_background}
+\setbeamercolor{subsubsection in sidebar}{fg=c_comment, bg=c_background}
+\setbeamercolor{subsubsection in sidebar shaded}{fg=c_comment, bg=c_background}
+
+\setbeamercolor{title in sidebar}{fg=c_comment, bg=c_background}
+\setbeamercolor{author in sidebar}{fg=c_comment, bg=c_background}
+\setbeamercolor{institute in sidebar}{fg=c_comment, bg=c_background}
+\setbeamercolor{date in sidebar}{fg=c_comment, bg=c_background}
+
+% Navigation bars
+\setbeamercolor{mini frames}{fg=c_comment, bg=c_background}
+\setbeamercolor{mini frame}{fg=c_comment, bg=c_background}
+
+% Navigation symbols
+\setbeamercolor{navigation symbols}{fg=c_comment, bg=c_background}
+\setbeamercolor{navigation symbols dimmed}{fg=c_comment, bg=c_background}
+
+% Logo
+\setbeamercolor{logo}{fg=c_title, bg=c_background}
+
+%%%%%% Elements of a frame
+
+% Frame title
+\setbeamercolor{frametitle}{fg=c_title, bg=c_background}
+\setbeamercolor{framesubtitle}{fg=c_title, bg=c_background}
+\setbeamercolor{frametitle right}{fg=c_title, bg=c_background}
+
+% Abstract
+\setbeamercolor{abstract}{fg=c_text, bg=c_background}
+\setbeamercolor{abstract title}{fg=c_color, bg=c_background}
+
+% Hyperlinks ans buttons
+\setbeamercolor{button}{fg=c_color, bg=c_background}
+\setbeamercolor{button border}{fg=c_color, bg=c_background}
+
+% Lists
+\setbeamercolor{item}{fg=c_color, bg=c_background}
+\setbeamercolor{itemize item}{fg=c_color, bg=c_background}
+\setbeamercolor{enumarate item}{fg=c_color, bg=c_background}
+\setbeamercolor{description item}{fg=c_color, bg=c_background}
+
+\setbeamercolor{item projected}{fg=c_color}
+\setbeamercolor{subitem projected}{fg=c_color}
+\setbeamercolor{subsubitem projected}{fg=c_color}
+
+\setbeamercolor{subitem}{fg=c_color, bg=c_background}
+\setbeamercolor{itemize subitem}{fg=c_color, bg=c_background}
+\setbeamercolor{enumarate subitem}{fg=c_color, bg=c_background}
+
+\setbeamercolor{subsubitem}{fg=c_color, bg=c_background}
+\setbeamercolor{itemize subsubitem}{fg=c_color, bg=c_background}
+\setbeamercolor{enumarate subsubitem}{fg=c_color, bg=c_background}
+
+\setbeamercolor{itemize/enumarate body}{bg=c_text, bg=c_background}
+\setbeamercolor{itemize/enumarate subbody}{bg=c_text, bg=c_background}
+\setbeamercolor{itemize/enumarate subsubbody}{bg=c_text, bg=c_background}
+\setbeamercolor{description body}{bg=c_text, bg=c_background}
+
+% Highlighting
+\setbeamercolor{structure}{fg=c_text, bg=c_background}
+\setbeamercolor{local structure}{fg=c_text, bg=c_background}
+\setbeamercolor{alerted text}{fg=c_color, bg=c_background}
+\setbeamercolor{example text}{fg=c_title, bg=c_background}
+
+% Blocks environments
+\setbeamercolor{block title}{fg=c_title, bg=c_background}
+\setbeamercolor{block body}{fg=c_text, bg=c_background}
+
+\setbeamercolor{block title alerted}{fg=c_color, bg=c_background}
+\setbeamercolor{block body alerted}{fg=c_color, bg=c_background}
+
+\setbeamercolor{block title example}{fg=c_title, bg=c_background}
+\setbeamercolor{block body example}{fg=c_title, bg=c_background}
+
+% Theorem environments
+\setbeamercolor{qed symbol}{fg=c_text, bg=c_background}
+
+% Figures and tables
+\setbeamercolor{caption}{fg=c_comment, bg=c_background}
+\setbeamercolor{caption name}{fg=c_comment, bg=c_background}
+
+% Verses, quotations and quotes
+\setbeamercolor{verses}{fg=c_title, bg=c_comment}
+\setbeamercolor{quotations}{fg=c_title, bg=c_comment}
+\setbeamercolor{quotes}{fg=c_title, bg=c_comment}
+
+% Footnotes
+\setbeamercolor{footnotes}{fg=c_comment, bg=c_background}
+\setbeamercolor{footnotes mark}{fg=c_comment, bg=c_background}
+
+% Mathematics
+\setbeamercolor{math text}{fg=c_text, bg=c_background}
+\setbeamercolor{math text inlined}{fg=c_text, bg=c_background}
+\setbeamercolor{math text displayed}{fg=c_text, bg=c_background}
+\setbeamercolor{normal text in math text}{fg=c_text, bg=c_background}

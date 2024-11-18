@@ -1,0 +1,64 @@
+\mode<presentation>
+
+%subthemse
+\useoutertheme[subsection=false]{miniframes}
+\useinnertheme{circles}
+
+% bib set
+\setbeamertemplate{bibliography entry title}{}
+\setbeamertemplate{bibliography entry location}{}
+\setbeamertemplate{bibliography entry note}{}
+\setbeamertemplate{bibliography item}[text]
+
+% hides navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamertemplate{title page}{
+\begin{center}
+    \vspace*{2.6cm}
+    {\usebeamercolor[fg]{title}\Huge \inserttitle}\\
+    {\usebeamercolor[fg]{subtitle}\Large \insertsubtitle}\\
+    \vspace{1cm}
+    {\usebeamercolor[fg]{author}\normalsize \insertauthor}\\
+    \vspace{.38cm}
+    {\usebeamercolor[fg]{date}\tiny \insertdate}\\
+    \vspace{.23cm}
+    {\usebeamercolor[fg]{institute}\tiny \insertinstitute}
+\end{center}
+}
+
+% footline
+\setbeamertemplate{footline}
+{
+\begin{beamercolorbox}[colsep=1.5pt]{upper separation line foot}
+\end{beamercolorbox}
+\begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{author in head/foot}
+	\leavevmode{\usebeamerfont{author in head/foot}\insertshortauthor}
+	\hfill
+	{\usebeamerfont{title in head/foot}\usebeamercolor{title in head/foot}\insertshorttitle}
+	\hfill
+	{\usebeamerfont{page number in head/foot}\usebeamercolor{page number in head/foot}\insertframenumber\,/\,\inserttotalframenumber}
+\end{beamercolorbox}
+\begin{beamercolorbox}[colsep=1.5pt]{lower separation line foot}
+\end{beamercolorbox}
+}
+
+% Section heading Frame
+\newcommand{\SHF}[1]{  % Aufgabentitel
+\section{#1}
+\begin{frame}[plain]
+    \centering
+    \color{c_color}
+    \huge{#1}
+\end{frame}
+}
+
+% Black frame
+\newcommand{\BF}{
+\setbeamercolor{background canvas}{bg=trueblack}
+\begin{frame}[plain, noframenumbering]{}
+\end{frame}
+\setbeamercolor{background canvas}{bg=white}
+}
+
+\mode<all>

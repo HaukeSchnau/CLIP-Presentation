@@ -1,0 +1,79 @@
+\usepackage{amsfonts} % advanced math fonts
+\usepackage{amsmath}  % advanced math 
+\usepackage{amssymb}  % advanced math symbols
+\usepackage[ngerman]{babel}  % language support ngerman
+\usepackage{booktabs}  % better tables
+\usepackage{array}  % special math thing
+\usepackage{calc}  % J says it's a dependency for some math thing
+\usepackage{cite} % bibliography
+\usepackage{csquotes}  % better quots
+\usepackage{float}  % better svg file handling
+\usepackage{gauss}  % for gauss elimination
+\usepackage{graphicx}  % external grafics
+\usepackage{hyperref}  % links
+\usepackage{kvmap}  % kv-diagrams
+\usepackage{listings}  % better code snippts
+\usepackage[verbatim]{lstfiracode} % for fira code 
+\usepackage{mathtools}  % better looking math
+\usepackage{marvosym}  % for cool lightning
+\usepackage{multicol}  % something with collums
+%\usepackage[fakebold]{firamath-otf} % fira for math
+\usepackage[parfill]{parskip}  % natural linebreaks
+\usepackage{stmaryrd}  % better math symbols
+\usepackage{svg}  % svg support
+\usepackage{subfiles}  % subfile support
+\usepackage[most]{tcolorbox}  % for boxes
+\usepackage{tikz}  % draw it yourself if you can
+\usepackage{siunitx} % dont know, was there before me
+\usepackage{xcolor}  % colors
+
+%fonts
+\usepackage[T1]{fontenc}
+\usepackage{FiraSans}
+\usepackage{newtxsf}
+
+% change default font by setting font as package parameter via [font=font]
+\DeclareOptionBeamer{font}{
+\usepackage[T1]{fontenc}
+\usepackage{#1}
+\usepackage{newtxsf}
+}
+\ProcessOptionsBeamer
+
+% bibliography
+\bibliographystyle{alpha}
+
+
+% lst
+\usepackage{FiraMono}  % font for listings
+\definecolor{code_comment}{named}{c_comment}
+\definecolor{code_background}{named}{c_codebg}
+\definecolor{code_keyword}{named}{red}
+\definecolor{code_string}{named}{blue}
+\definecolor{code_text}{named}{c_text}
+
+\lstset{
+	style=FiraCodeStyle,
+	backgroundcolor=\color{code_background},
+	commentstyle=\color{code_comment},
+	keywordstyle=\color{code_green},
+	numberstyle=\tiny\ttfamily\color{code_text},
+	stringstyle=\color{code_orange},
+	basicstyle=\ttfamily\linespread{1.15}\scriptsize\color{code_text},
+	breakatwhitespace=false,
+	breaklines=true,
+	captionpos=b,
+	keepspaces=false,
+	numbers=left,
+	numbersep=5pt,
+	showspaces=true,
+	showstringspaces=false,
+	showtabs=true,
+	tabsize=2
+}
+
+% mavrosym config
+\let\marvosymLightning\Lightning
+
+% tiks config
+\usetikzlibrary{positioning,shadows,arrows}
