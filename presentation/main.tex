@@ -2,8 +2,9 @@
 \usetheme{HamburgNeue}
 \usecolortheme{Crayfish}  %                         <--- set color, high-contrast or dark-mode (experimental) here
 \usepackage{./head}  %                              <--- set font here
-\newcommand{\bibfile}{literatur} %                  <--- change path to .bib-file here
+\usepackage{biblatex}
 
+\addbibresource{literatur.bib}
 
 \title{CLIP - Contrastive Language-Image Pretraining}
 \subtitle{Deep Learning for Natural Language Processing
@@ -26,18 +27,27 @@
 
 % \tableofcontents[hidesubsections]
 % \end{frame}
-%                                           <--- Begin here
 
-\section{Einleitung}
+% Test - remove this when done
+\section{Test}
 \begin{frame}
-\frametitle{Einleitung}
-    \cite{einstein}
+    \frametitle{Test}
+    Sample thing \footfullcite{einstein}
 \end{frame}
 
-%                                           <--- End here
-\section{Literatur}
+\section{Motivation}
+\begin{frame}
+\frametitle{Motivation}
+\begin{itemize}
+    \item Traditional image classification models are trained on large datasets of labeled images
+    \item Requires lots of labels and computational resources to train
+    \item 
+\end{itemize}
+\end{frame}
+    
+\section{Literature}
 \begin{frame}[allowframebreaks]
-\frametitle{Literatur}
-\bibliography{\bibfile}
+    \frametitle{Literature}
+    \printbibliography
 \end{frame}
 \end{document}
