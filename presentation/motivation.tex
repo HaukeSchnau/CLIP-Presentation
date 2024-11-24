@@ -1,0 +1,30 @@
+\section{Motivation}
+\begin{frame}
+    \frametitle{Issues with Traditional Image Classification using CNNs}
+    \begin{itemize}
+        \item Traditional image classification models are trained on large datasets of labeled images
+              \pause
+        \item \textbf{Costly dataset:} Requires lots of manually labeled data
+              \pause
+        \item \textbf{Narrow:} Each new task requires a new model to be trained from scratch or fine-tuned $\rightarrow$ Expensive!
+    \end{itemize}
+
+    \pause
+
+    Can we do better without compromising on performance?
+
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Idea: Train model to \textit{understand} images}
+    \begin{itemize}
+        \item Instead of training on labeled images, train on images and their descriptions
+        \item Model learns to associate images with their descriptions
+        \item At inference time, predict the description of an image
+    \end{itemize}
+
+    \pause
+
+    Key advantage: \textbf{Zero-shot learning} $\rightarrow$ Model can predict descriptions of image categories it has never seen before.
+\end{frame}

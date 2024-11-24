@@ -1,53 +1,45 @@
-\documentclass[compress]{beamer}
+\documentclass[compress,aspectratio=169]{beamer}
 \usetheme{HamburgNeue}
 \usecolortheme{Crayfish}  %                         <--- set color, high-contrast or dark-mode (experimental) here
 \usepackage{./head}  %                              <--- set font here
 \usepackage{biblatex}
 
+
 \addbibresource{literatur.bib}
+\graphicspath{./images}
 
 \title{CLIP - Contrastive Language-Image Pretraining}
-\subtitle{Deep Learning for Natural Language Processing
-}
+\subtitle{Radford et al. (2021) - OpenAI}
 \author{Hauke Schnau}
 \institute{Fachbereich Informatik\\Fakultät für Mathematik, Informatik und Naturwissenschaften\\Universität Hamburg}
 \date{\today}
 
+\newcommand{\framecite}[1]{\footnote[frame]{\fullcite{#1}}}
+
+% Set footnote size
+\setbeamerfont{footnote}{size=\tiny}
+
 \begin{document}
 
 \begin{frame}[plain, label=intro, noframenumbering]
-\titlepage
+    \titlepage
 \end{frame}
 
-% \begin{frame}[plain, label=intro, noframenumbering]
-% \titlepage
-% \end{frame}
-% \begin{frame}
-% \frametitle{Gliederung}
+\include{motivation}
+\include{architecture}
+\include{benchmarks}
+\include{conclusion}
 
-% \tableofcontents[hidesubsections]
-% \end{frame}
-
-% Test - remove this when done
-\section{Test}
-\begin{frame}
-    \frametitle{Test}
-    Sample thing \footfullcite{einstein}
-\end{frame}
-
-\section{Motivation}
-\begin{frame}
-\frametitle{Motivation}
-\begin{itemize}
-    \item Traditional image classification models are trained on large datasets of labeled images
-    \item Requires lots of labels and computational resources to train
-    \item 
-\end{itemize}
-\end{frame}
-    
-\section{Literature}
 \begin{frame}[allowframebreaks]
-    \frametitle{Literature}
+    \frametitle{References}
     \printbibliography
+    \LaTeX{}-Beamer template by \href{
 \end{frame}
+
+\begin{frame}
+    \centering
+    \Large If time permits: \par
+    \Huge Demo?
+\end{frame}
+
 \end{document}

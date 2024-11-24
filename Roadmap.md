@@ -1,7 +1,8 @@
 - [X] Rough Overview
 - [ ] Read Paper
-- [ ] Structure
+- [X] Structure
+
 - [ ] Transformer Recap
 - [ ] Vision Transformer Recap
-- [ ] Try the model
+- [X] Try the model
 
